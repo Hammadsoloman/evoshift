@@ -30,7 +30,7 @@ const contactquery = groq`
   },
 };
 
-export default function page() {
+export default function CaseStudyPage() {
   const searchParams = useSearchParams();
 
   const [cases, setCases] = useState([]);

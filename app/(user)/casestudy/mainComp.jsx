@@ -5,7 +5,7 @@ import Link from "next/link";
 import React from "react";
 import urlFor from '../../../lib/urlFor';
 
-const CaseStudyPage = ({cases ,contact , loadMore}) => {
+const CaseStudyPageMain = ({cases ,contact , loadMore}) => {
   useWow()
   return (
     <MainLayout contact={contact}>
@@ -88,4 +88,4 @@ return (
   );
 };
 
-export default CaseStudyPage;
+export default CaseStudyPageMain;
