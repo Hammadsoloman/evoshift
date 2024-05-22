@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useState, useEffect, useMemo } from "react";
-import { useSearchParams, useRouter } from "next/navigation";
+//import { useSearchParams, useRouter } from "next/navigation";
 import { groq } from "next-sanity";
 import { client } from "../../../lib/sanity.client";
-import MainCases from "./mainComp";
+import MainCases from "./MainCases";
 
-export const revalidate = 30;
+//export const revalidate = 30;
 
 const query = groq`
   *[_type=='casestudy'] {
@@ -24,16 +24,16 @@ const contactquery = groq`
   } | order(_createdAt desc)
 `;
 
- const metadata = {
+const metadata = {
   icons: {
     icon: "/assets/img/sm-logo.svg",
   },
 };
 
-export default function CaseStudyPage() {
-  const searchParams = useSearchParams();
-
-  const [cases, setCases] = useState([]);
+const CasePage =  () => {
+  
+//  // const searchParams = useSearchParams();
+const [cases, setCases] = useState<any[]>([]);
   const [contacts, setContacts] = useState([]);
   const [offset, setOffset] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -64,10 +64,10 @@ export default function CaseStudyPage() {
 
   return (
     <div>
-   <MainCases   loadMore={getCases} contact={contacts[0]} cases={cases} />
+      <MainCases loadMore={getCases} contact={contacts[0]} cases={cases} />
     </div>
   );
-}
+};
 
 //import { groq } from "next-sanity";
 // import { client } from "../../../lib/sanity.client";
@@ -116,4 +116,4 @@ export default function CaseStudyPage() {
 //   );
 // };
 
-// export default CasePage;
+export default CasePage;
