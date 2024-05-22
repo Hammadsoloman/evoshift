@@ -38,7 +38,7 @@ export default function Page() {
 `;
 
   const [offset, setOffset] = useState(0);
-  const [loading, setLoading] = useState(false);
+ // const [loading, setLoading] = useState(false);
 
   const getPosts = async () => {
     if (cat || tag) {
