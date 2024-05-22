@@ -8,11 +8,11 @@ import MainBlogs from "./mainBlogs";
 import { off } from "process";
 export default function Page() {
   const searchParams = useSearchParams();
-  const cat = searchParams.get("category");
-  const tag = searchParams.get("tag");
+  const cat = searchParams?.get("category");
+  const tag = searchParams?.get("tag");
   const isparams = cat || tag ? true : false;
 
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState<any []>([]);
   const [cats, setCats] = useState([]);
   const [tags, setTags] = useState([]);
   const [newposts, setNewPosts] = useState([]);
