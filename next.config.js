@@ -30,11 +30,25 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  // images: {
+  //   domains: ["i.imgur.com", "cdn.sanity.io"],
+  // },
   images: {
-    domains: ["i.imgur.com", "cdn.sanity.io"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**.imgur.com",
+        port: "",
+      },
+      {
+        protocol: "https",
+        hostname: "**.sanity.io",
+        port: "",
+      },
+    ],
   },
   experimental: {
-    appDir: true,
+    //appDir: true,
     missingSuspenseWithCSRBailout: false,
   },
 
