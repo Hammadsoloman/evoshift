@@ -174,7 +174,7 @@ const Home1Contact = ({ contact }) => {
                         <span>Facebook</span>
                       </a>
                     </li>
-                  {/*  <li>
+                    {/*  <li>
                       <a href={contact?.twitter}>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -270,7 +270,7 @@ const Home1Contact = ({ contact }) => {
                           <textarea
                             name="message"
                             onChange={inputChange}
-                            value={state.message}                           
+                            value={state.message}
                           />
                         </div>
                       </div>
