@@ -13,7 +13,7 @@ import Home1Solution from "../../components/solution/Home1Solution";
 import Home1Testimonial from "../../components/testimonial/Home1Testimonial";
 import Home1WorkProcess from "../../components/workProcess/Home1WorkProcess";
 // -----------------
-import { groq } from 'next-sanity';
+import { groq } from 'next-sanity';//ok
 import { client } from '../../lib/sanity.client';
 
 export const revalidate = 30;
