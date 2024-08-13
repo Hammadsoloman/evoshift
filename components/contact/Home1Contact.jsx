@@ -270,8 +270,7 @@ const Home1Contact = ({ contact }) => {
                           <textarea
                             name="message"
                             onChange={inputChange}
-                            value={state.message}
-                            defaultValue={""}
+                            value={state.message}                           
                           />
                         </div>
                       </div>
