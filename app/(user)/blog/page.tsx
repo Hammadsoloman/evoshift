@@ -5,7 +5,7 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { groq } from "next-sanity";
 import { client } from "../../../lib/sanity.client";
 import MainBlogs from "./mainBlogs";
-import { off } from "process";
+//import { off } from "process";
 
 const nepostsquery = groq`
 *[_type=='post'] {
