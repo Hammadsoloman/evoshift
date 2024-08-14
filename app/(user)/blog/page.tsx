@@ -6,6 +6,27 @@ import { groq } from "next-sanity";
 import { client } from "../../../lib/sanity.client";
 import MainBlogs from "./mainBlogs";
 import { off } from "process";
+
+const nepostsquery = groq`
+*[_type=='post'] {
+  ...,
+  author->,
+  categories[]->
+} | order(_createdAt desc) [0...3]
+`;
+
+const catsquery = groq`*[_type == "category"] {
+...,
+"count": count(*[_type == "post" && references(^._id)])
+} | order(count desc) [0...5]`;
+
+const tagsquery = groq`
+*[_type=='tag'] {
+  ...,
+
+} | order(_createdAt desc)
+`;
+
 export default function Page() {
   const searchParams = useSearchParams();
   const cat = searchParams?.get("category");
@@ -17,25 +38,7 @@ export default function Page() {
   const [tags, setTags] = useState([]);
   const [newposts, setNewPosts] = useState([]);
 
-  const nepostsquery = groq`
-  *[_type=='post'] {
-    ...,
-    author->,
-    categories[]->
-  } | order(_createdAt desc) [0...3]
-`;
 
-  const catsquery = groq`*[_type == "category"] {
-  ...,
-  "count": count(*[_type == "post" && references(^._id)])
-} | order(count desc) [0...5]`;
-
-  const tagsquery = groq`
-  *[_type=='tag'] {
-    ...,
-
-  } | order(_createdAt desc)
-`;
 
   const [offset, setOffset] = useState(0);
  // const [loading, setLoading] = useState(false);

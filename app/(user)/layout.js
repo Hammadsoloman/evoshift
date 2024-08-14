@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
         <ThemeSwitch />
         {children}
         <LiveChat/>
-        <script src="/evoshift.min.js"/>
+        <script src="/evoshift.min.js" async defer />
       </body>
     </html>
   );

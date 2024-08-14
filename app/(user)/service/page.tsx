@@ -26,6 +26,7 @@ export const metadata = {
     icon: "/assets/img/sm-logo.svg",
   },
 };
+
 const Services = async () => {
   const services = await client.fetch(query);
   const contact = await client.fetch(contactquery);
