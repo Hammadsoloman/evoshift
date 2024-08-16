@@ -1,92 +1,108 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from "sanity";
 import { DocumentTextIcon } from "@sanity/icons";
 export default defineType({
-  name: 'casestudy',
-  title: 'CaseStudy',
-  type: 'document',
+  name: "casestudy",
+  title: "CaseStudy",
+  type: "document",
   fields: [
     defineField({
-      name: 'title',
-      title: 'Title',
-      type: 'string',
+      name: "title",
+      title: "Title",
+      type: "string",
     }),
     defineField({
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
+      name: "slug",
+      title: "Slug",
+      type: "slug",
       options: {
-        source: 'title',
+        source: "title",
         maxLength: 33,
       },
     }),
 
-
+    defineField({
+      name: "location",
+      title: "Location",
+      type: "string",
+    }),
+    defineField({
+      name: "client",
+      title: "Client",
+      type: "string",
+    }),
 
     defineField({
-        name: 'location',
-        title: 'Location',
-        type: 'string',
-      }),
-      defineField({
-        name: 'client',
-        title: 'Client',
-        type: 'string',
-      }),
-
-      defineField({
-        name: 'industry',
-        title: 'Industry',
-        type: 'string',
-      }),
-
-      defineField({
-        name: 'stack',
-        title: 'Stack',
-        type: 'string',
-      }),
-
+      name: "industry",
+      title: "Industry",
+      type: "string",
+    }),
 
     defineField({
-      name: 'mainImage',
-      title: 'Main image',
-      type: 'image',
+      name: "stack",
+      title: "Stack",
+      type: "string",
+    }),
+
+    defineField({
+      name: "mainImage",
+      title: "Main image",
+      type: "image",
       options: {
         hotspot: true,
       },
     }),
 
-
     defineField({
-      name: 'category',
-      title: 'Category',
-      type: 'reference',
-      to: {type: 'category'},
-    }),
-
-
-
- 
-
-
-    defineField({
-      name: 'publishedAt',
-      title: 'Published at',
-      type: 'datetime',
-    }),
-    defineField({
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent',
+      name: "category",
+      title: "Category",
+      type: "reference",
+      to: { type: "category" },
     }),
 
     defineField({
-      name: 'description',
-      description: 'Enter a short snippet for the blog...',
-      title: 'Description',
-      type: 'string',
+      name: "publishedAt",
+      title: "Published at",
+      type: "datetime",
+    }),
+    defineField({
+      name: "body",
+      title: "Body",
+      type: "blockContent",
     }),
 
+    defineField({
+      name: "description",
+      description: "Enter a short snippet for the blog...",
+      title: "Description",
+      type: "string",
+    }),
 
+    {
+      name: "gallery",
+      type: "array",
+      title: "Gallery",
+      of: [
+        {
+          type: "object",
+          fields: [
+            defineField({
+              name: "screenshot",
+              type: "image",
+              options: { hotspot: true },
+                fields: [
+                  defineField({
+                    name: "alt",
+                    type: "string",
+                    title: "Alternative text",
+                  }),
+                ],
+            }),
+          ],
+
+          // show icon instead of icon name
+        },
+      ],
+    },
   ],
 
   preview: {
@@ -102,4 +118,4 @@ export default defineType({
       };
     },
   },
-})
+});
