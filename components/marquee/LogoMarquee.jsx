@@ -1,10 +1,9 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
 import urlFor from "../../lib/urlFor";
-const LogoMarquee = ({brandsData}) => {
-
-console.log(">>>ASASAS<<<<<" , brandsData)
-
+import Image from "next/image";
+const LogoMarquee = ({ brandsData }) => {
+  console.log(">>>ASASAS<<<<<", brandsData);
 
   return (
     <div
@@ -20,15 +19,18 @@ console.log(">>>ASASAS<<<<<" , brandsData)
           <div className="logo-area">
             <div className="marquee_text2">
               <Marquee>
-
-              {brandsData?.images?.map((item, index) => {
-                  
+                {brandsData.map((item, index) => {
                   return (
-                
-                  <img key={index}      src={urlFor(item)?.url()}  alt="" />
-              
-              
-                  )})}
+                    <Image
+                      key={index}
+                      src={urlFor(item?.images[0])?.url()}
+                      alt=""
+                      width={200}
+                      height={100}
+                      style={{ maxHeight: 200 }}
+                    />
+                  );
+                })}
               </Marquee>
             </div>
           </div>

@@ -193,15 +193,17 @@ const Home1Testimonial = ({ data: items }) => {
                       <div key={index} className="swiper-wrapper">
                         <SwiperSlide className="swiper-slide">
                           <div className="testimonial-card3 style-2">
-                            <span>{item?.title}!</span>
+                            <span>{item?.title}</span>
                             <p>{item?.description}</p>
                             <div className="author-and-logo-area">
                               <div className="author-area">
                                 <div className="author-img">
-                                  <img
-                                    src={urlFor(item?.image)?.url()}
-                                    alt=""
-                                  />
+                                  {item?.image && (
+                                    <img
+                                      src={urlFor(item?.image)?.url()}
+                                      alt={item?.username ?? ""}
+                                    />
+                                  )}
                                 </div>
                                 <div className="content">
                                   <h6>{item?.username}</h6>

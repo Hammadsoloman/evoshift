@@ -81,7 +81,7 @@ const clientsquery = groq`
     
     
    
-  } | order(_createdAt desc)
+  } | order(_createdAt asc)
 `;
 
 const casestudyquery = groq`
@@ -185,7 +185,7 @@ const HomePage = async () => {
       <Home1Approach data={approachData} />
       <Home1Testimonial data={clientsData} />
       <BannerWithCaseStudySlider caseInfo={caseInfo[0]} casesData={casesData} />
-      <LogoMarquee brandsData={brandsData[0]} />
+      <LogoMarquee brandsData={brandsData} />
       {/* <Home1Portfolio showcaseData={showcaseData} />*/}
       <Home1Blog blogsData={blogsData} />
       <Home1Contact contact={contact[0]} />
