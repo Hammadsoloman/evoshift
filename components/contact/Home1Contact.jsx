@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { useState } from "react";
+import { ContactInfo } from "../../lib/contact";
 const Home1Contact = ({ contact }) => {
   const [state, setstate] = useState({
     name: "",
@@ -123,7 +124,9 @@ const Home1Contact = ({ contact }) => {
                     <div className="content">
                       <span>To More Inquiry</span>
                       <h6>
-                        <a href="tel:+990737621432">{contact?.phone}</a>
+                        <a href={`tel:${ContactInfo.phone}`}>
+                          {contact?.phone ?? ContactInfo.phone}
+                        </a>
                       </h6>
                     </div>
                   </div>
@@ -145,8 +148,10 @@ const Home1Contact = ({ contact }) => {
                     <div className="content">
                       <span>To Send Mail</span>
                       <h6>
-                        <a href={`mailto:${contact?.email}`}>
-                          {contact?.email}
+                        <a
+                          href={`mailto:${contact?.email ?? ContactInfo.email}`}
+                        >
+                          {contact?.email ?? ContactInfo.email}
                         </a>
                       </h6>
                     </div>
@@ -163,13 +168,13 @@ const Home1Contact = ({ contact }) => {
                   </h6>
                   <ul className="social-list">
                     <li>
-                      <a href={contact?.linkden}>
+                      <a href={contact?.linkden ?? ContactInfo.linkedin}>
                         <i className="bi bi-linkedin" />
                         <span>LinkedIn</span>
                       </a>
                     </li>
                     <li>
-                      <a href={contact?.facebook}>
+                      <a href={contact?.facebook ?? ContactInfo.facebook}>
                         <i className="bi bi-facebook" />
                         <span>Facebook</span>
                       </a>
@@ -190,7 +195,7 @@ const Home1Contact = ({ contact }) => {
                       </a>
   </li>*/}
                     <li>
-                      <a href={contact?.instagram}>
+                      <a href={contact?.instagram ?? ContactInfo.instagram}>
                         <i className="bi bi-instagram" />
                         <span>Instagram</span>
                       </a>

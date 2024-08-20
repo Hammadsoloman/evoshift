@@ -11,6 +11,7 @@ const services = [
   { title: "UI/UX Design", url: "/service/ui-ux-design" },
   { title: "Maintenance and Support", url: "/service/maintenance-and-support" },
   { title: "Custom Software Development", url: "/service/custom-software" },
+  { title: "Mobile App Development", url: "/service/mobile-application-development" },
 ];
 
 const Footer =  () => {

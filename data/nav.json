@@ -109,23 +109,23 @@
     {
         "id": "3",
         "label": "Case Study",
-        "link": "/case-study",
+        "link": "/portfolio",
         "icon": true,
         "subMenu": [
             {
                 "id": "1",
                 "label": "Case Study Style 01",
-                "link": "/case-study"
+                "link": "/portfolio"
             },
             {
                 "id": "2",
                 "label": "Case Study Style 02",
-                "link": "/case-study/case-study2"
+                "link": "/portfolio/portfolio2"
             },
             {
                 "id": "3",
                 "label": "Case Study Details",
-                "link": "/case-study/case-study-details"
+                "link": "/portfolio/portfolio-details"
             }
         ]
     },

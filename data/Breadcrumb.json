@@ -37,21 +37,21 @@
     {
         "id": "6",
         "name": "CASE STUDY",
-        "slug": "/case-study",
+        "slug": "/portfolio",
         "pageTitle": "Success In The Field.",
         "section_down_scroll": "#case-study-card-section"
     },
     {
         "id": "7",
         "name": "CASE STUDY",
-        "slug": "/case-study/case-study2",
+        "slug": "/portfolio/portfolio2",
         "pageTitle": "Success In The Field.",
         "section_down_scroll": "#case-study-card-section"
     },
     {
         "id": "8",
         "name": "CASE STUDY",
-        "slug": "/case-study/case-study-details",
+        "slug": "/portfolio/portfolio-details",
         "pageTitle": "Navigating Growth A Startup Agency Success Story. on Creative & unique ideas.",
         "section_down_scroll": "#case-study-card-section"
     },

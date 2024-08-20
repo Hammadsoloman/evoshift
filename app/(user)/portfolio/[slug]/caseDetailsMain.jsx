@@ -304,7 +304,7 @@ const CaseStudyDetails = ({ casedata, contact }) => {
 
                   {casedata?.prev !== null && (
                     <div className="nav-btn">
-                      <Link href={`/casestudy/${casedata?.prev?.current}`}>
+                      <Link href={`/portfolio/${casedata?.prev?.current}`}>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width={10}
@@ -348,7 +348,7 @@ const CaseStudyDetails = ({ casedata, contact }) => {
 
                   {casedata?.next !== null && (
                     <div className="nav-btn">
-                      <Link href={`/casestudy/${casedata?.next?.current}`}>
+                      <Link href={`/portfolio/${casedata?.next?.current}`}>
                         <span>NEXT CASE</span>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -406,12 +406,12 @@ const CaseStudyDetails = ({ casedata, contact }) => {
             <div className="col-xl-4 col-md-6">
               <div className="case-study-card style-2">
                 <div className="card-img">
-                  <img src="/assets/img/innerpage/case-study-img1.jpg" alt="" />
+                  <img src="/assets/img/innerpage/portfolio-img1.jpg" alt="" />
                 </div>
                 <div className="card-content">
-                  <Link href="/case-study">Startup Company</Link>
+                  <Link href="/portfolio">Startup Company</Link>
                   <h4>
-                    <Link href="/case-study/case-study-details">
+                    <Link href="/portfolio/portfolio-details">
                       Navigating Growth A Startup Agency Success Story.
                     </Link>
                   </h4>
@@ -421,7 +421,7 @@ const CaseStudyDetails = ({ casedata, contact }) => {
                     our collaborative efforts.
                   </p>
                   <Link
-                    href="/case-study/case-study-details"
+                    href="/portfolio/portfolio-details"
                     className="learn-more-btn"
                   >
                     Learn MORE
@@ -441,12 +441,12 @@ const CaseStudyDetails = ({ casedata, contact }) => {
             <div className="col-xl-4 col-md-6">
               <div className="case-study-card style-2">
                 <div className="card-img">
-                  <img src="/assets/img/innerpage/case-study-img2.jpg" alt="" />
+                  <img src="/assets/img/innerpage/portfolio-img2.jpg" alt="" />
                 </div>
                 <div className="card-content">
-                  <Link href="/case-study">Design Agency</Link>
+                  <Link href="/portfolio">Design Agency</Link>
                   <h4>
-                    <Link href="/case-study/case-study-details">
+                    <Link href="/portfolio/portfolio-details">
                       Customer Centric Strategies Acquiring Retaining.
                     </Link>
                   </h4>
@@ -456,7 +456,7 @@ const CaseStudyDetails = ({ casedata, contact }) => {
                     by Egenslab.
                   </p>
                   <Link
-                    href="/case-study/case-study-details"
+                    href="/portfolio/portfolio-details"
                     className="learn-more-btn"
                   >
                     Learn MORE
@@ -476,12 +476,12 @@ const CaseStudyDetails = ({ casedata, contact }) => {
             <div className="col-xl-4 col-md-6">
               <div className="case-study-card style-2">
                 <div className="card-img">
-                  <img src="/assets/img/innerpage/case-study-img3.jpg" alt="" />
+                  <img src="/assets/img/innerpage/portfolio-img3.jpg" alt="" />
                 </div>
                 <div className="card-content">
-                  <Link href="/case-study">Digital Transformation</Link>
+                  <Link href="/portfolio">Digital Transformation</Link>
                   <h4>
-                    <Link href="/case-study/case-study-details">
+                    <Link href="/portfolio/portfolio-details">
                       Tech Breakthroughs Solution Pioneering Digital Age.
                     </Link>
                   </h4>
@@ -491,7 +491,7 @@ const CaseStudyDetails = ({ casedata, contact }) => {
                     our collaborative efforts.
                   </p>
                   <Link
-                    href="/case-study/case-study-details"
+                    href="/portfolio/portfolio-details"
                     className="learn-more-btn"
                   >
                     Learn MORE

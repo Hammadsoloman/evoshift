@@ -103,7 +103,7 @@ const BannerWithCaseStudySlider = ({ caseInfo, casesData }) => {
                 >
                   <p>{caseInfo?.desc}</p>
                   <Link
-                    href="/case-study"
+                    href="/portfolio"
                     className="primary-btn1 hover-white"
                     data-text="View All Stories"
                   >
@@ -172,17 +172,17 @@ const BannerWithCaseStudySlider = ({ caseInfo, casesData }) => {
                             )}
                           </div>
                           <div className="card-content">
-                            <Link href={`/casestudy/${item?.slug.current}`}>
+                            <Link href={`/portfolio/${item?.slug.current}`}>
                               {item?.category?.title}
                             </Link>
                             <h4>
-                              <Link href={`/casestudy/${item?.slug.current}`}>
+                              <Link href={`/portfolio/${item?.slug.current}`}>
                                 {item?.title}
                               </Link>
                             </h4>
                             <p>{item?.desc}</p>
                             <Link
-                              href={`/casestudy/${item?.slug.current}`}
+                              href={`/portfolio/${item?.slug.current}`}
                               className="learn-more-btn"
                             >
                               Learn MORE

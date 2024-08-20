@@ -88,7 +88,7 @@ const Home2CaseStudySlide = () => {
                 <h2>Stories of Growth Triumph</h2>
               </div>
               <Link
-                href="/case-study/case-study2"
+                href="/portfolio/portfolio2"
                 className="primary-btn2 wow animate fadeInRight"
                 data-wow-delay="400ms"
                 data-wow-duration="1500ms"
@@ -113,13 +113,13 @@ const Home2CaseStudySlide = () => {
                     <div className="case-study-card2">
                       <div className="card-img">
                         <img
-                          src="assets/img/home2/case-study-img1.jpg"
+                          src="assets/img/home2/portfolio-img1.jpg"
                           alt=""
                         />
                       </div>
                       <div className="card-content">
                         <h4>
-                          <Link href="/case-study/case-study-details">
+                          <Link href="/portfolio/portfolio-details">
                             Beautico E-commerce Growth rate.{" "}
                           </Link>
                         </h4>
@@ -132,17 +132,17 @@ const Home2CaseStudySlide = () => {
                         </div>
                         <ul className="tag-list">
                           <li>
-                            <Link href="/case-study">Paid Search</Link>
+                            <Link href="/portfolio">Paid Search</Link>
                           </li>
                           <li>
-                            <Link href="/case-study">Paid Social</Link>
+                            <Link href="/portfolio">Paid Social</Link>
                           </li>
                           <li>
-                            <Link href="/case-study">SEO</Link>
+                            <Link href="/portfolio">SEO</Link>
                           </li>
                         </ul>
                         <Link
-                          href="/case-study/case-study-details"
+                          href="/portfolio/portfolio-details"
                           className="read-more-btn"
                         >
                           Read The Success Stories
@@ -166,13 +166,13 @@ const Home2CaseStudySlide = () => {
                     <div className="case-study-card2">
                       <div className="card-img">
                         <img
-                          src="assets/img/home2/case-study-img2.jpg"
+                          src="assets/img/home2/portfolio-img2.jpg"
                           alt=""
                         />
                       </div>
                       <div className="card-content">
                         <h4>
-                          <Link href="/case-study/case-study-details">
+                          <Link href="/portfolio/portfolio-details">
                             Goldmiths Corpo Engagement rates.
                           </Link>
                         </h4>
@@ -185,17 +185,17 @@ const Home2CaseStudySlide = () => {
                         </div>
                         <ul className="tag-list">
                           <li>
-                            <Link href="/case-study">Organic Social Meida</Link>
+                            <Link href="/portfolio">Organic Social Meida</Link>
                           </li>
                           <li>
-                            <Link href="/case-study">Paid Social</Link>
+                            <Link href="/portfolio">Paid Social</Link>
                           </li>
                           <li>
-                            <Link href="/case-study">SEO</Link>
+                            <Link href="/portfolio">SEO</Link>
                           </li>
                         </ul>
                         <Link
-                          href="/case-study/case-study-details"
+                          href="/portfolio/portfolio-details"
                           className="read-more-btn"
                         >
                           Read The Success Stories
@@ -219,13 +219,13 @@ const Home2CaseStudySlide = () => {
                     <div className="case-study-card2">
                       <div className="card-img">
                         <img
-                          src="assets/img/home2/case-study-img3.jpg"
+                          src="assets/img/home2/portfolio-img3.jpg"
                           alt=""
                         />
                       </div>
                       <div className="card-content">
                         <h4>
-                          <Link href="/case-study/case-study-details">
+                          <Link href="/portfolio/portfolio-details">
                             Fashion E-commerce Growth rate.
                           </Link>
                         </h4>
@@ -238,17 +238,17 @@ const Home2CaseStudySlide = () => {
                         </div>
                         <ul className="tag-list">
                           <li>
-                            <Link href="/case-study">Paid Search</Link>
+                            <Link href="/portfolio">Paid Search</Link>
                           </li>
                           <li>
-                            <Link href="/case-study">Paid Social</Link>
+                            <Link href="/portfolio">Paid Social</Link>
                           </li>
                           <li>
-                            <Link href="/case-study">SEO</Link>
+                            <Link href="/portfolio">SEO</Link>
                           </li>
                         </ul>
                         <Link
-                          href="/case-study/case-study-details"
+                          href="/portfolio/portfolio-details"
                           className="read-more-btn"
                         >
                           Read The Success Stories
@@ -272,13 +272,13 @@ const Home2CaseStudySlide = () => {
                     <div className="case-study-card2">
                       <div className="card-img">
                         <img
-                          src="assets/img/home2/case-study-img4.jpg"
+                          src="assets/img/home2/portfolio-img4.jpg"
                           alt=""
                         />
                       </div>
                       <div className="card-content">
                         <h4>
-                          <Link href="/case-study/case-study-details">
+                          <Link href="/portfolio/portfolio-details">
                             Health E-commerce Success rate.{" "}
                           </Link>
                         </h4>
@@ -291,17 +291,17 @@ const Home2CaseStudySlide = () => {
                         </div>
                         <ul className="tag-list">
                           <li>
-                            <Link href="/case-study">Paid Search</Link>
+                            <Link href="/portfolio">Paid Search</Link>
                           </li>
                           <li>
-                            <Link href="/case-study">Paid Social</Link>
+                            <Link href="/portfolio">Paid Social</Link>
                           </li>
                           <li>
-                            <Link href="/case-study">SEO</Link>
+                            <Link href="/portfolio">SEO</Link>
                           </li>
                         </ul>
                         <Link
-                          href="/case-study/case-study-details"
+                          href="/portfolio/portfolio-details"
                           className="read-more-btn"
                         >
                           Read The Success Stories
@@ -325,13 +325,13 @@ const Home2CaseStudySlide = () => {
                     <div className="case-study-card2">
                       <div className="card-img">
                         <img
-                          src="assets/img/home2/case-study-img5.jpg"
+                          src="assets/img/home2/portfolio-img5.jpg"
                           alt=""
                         />
                       </div>
                       <div className="card-content">
                         <h4>
-                          <Link href="/case-study/case-study-details">
+                          <Link href="/portfolio/portfolio-details">
                             Travel &amp; Tour Agency Growth rate.
                           </Link>
                         </h4>
@@ -344,17 +344,17 @@ const Home2CaseStudySlide = () => {
                         </div>
                         <ul className="tag-list">
                           <li>
-                            <Link href="/case-study">Organic Social Meida</Link>
+                            <Link href="/portfolio">Organic Social Meida</Link>
                           </li>
                           <li>
-                            <Link href="/case-study">Paid Social</Link>
+                            <Link href="/portfolio">Paid Social</Link>
                           </li>
                           <li>
-                            <Link href="/case-study">SEO</Link>
+                            <Link href="/portfolio">SEO</Link>
                           </li>
                         </ul>
                         <Link
-                          href="/case-study/case-study-details"
+                          href="/portfolio/portfolio-details"
                           className="read-more-btn"
                         >
                           Read The Success Stories
@@ -378,13 +378,13 @@ const Home2CaseStudySlide = () => {
                     <div className="case-study-card2">
                       <div className="card-img">
                         <img
-                          src="assets/img/home2/case-study-img2.jpg"
+                          src="assets/img/home2/portfolio-img2.jpg"
                           alt=""
                         />
                       </div>
                       <div className="card-content">
                         <h4>
-                          <Link href="/case-study/case-study-details">
+                          <Link href="/portfolio/portfolio-details">
                             Goldmiths Corpo Engagement rates.
                           </Link>
                         </h4>
@@ -397,17 +397,17 @@ const Home2CaseStudySlide = () => {
                         </div>
                         <ul className="tag-list">
                           <li>
-                            <Link href="/case-study">Organic Social Meida</Link>
+                            <Link href="/portfolio">Organic Social Meida</Link>
                           </li>
                           <li>
-                            <Link href="/case-study">Paid Social</Link>
+                            <Link href="/portfolio">Paid Social</Link>
                           </li>
                           <li>
-                            <Link href="/case-study">SEO</Link>
+                            <Link href="/portfolio">SEO</Link>
                           </li>
                         </ul>
                         <Link
-                          href="/case-study/case-study-details"
+                          href="/portfolio/portfolio-details"
                           className="read-more-btn"
                         >
                           Read The Success Stories

@@ -400,7 +400,7 @@ const Header2 = ({ data }) => {
     </ul>
   </li>
   <li>
-    <Link href="/case-study">Case Study</Link>
+    <Link href="/portfolio">Case Study</Link>
     <span
       className={`dropdown-icon2 ${
         state.activeMenu === "case-study" ? "active" : ""
@@ -415,7 +415,7 @@ const Header2 = ({ data }) => {
       }`}
     >
       <li>
-        <Link href="/case-study">
+        <Link href="/portfolio">
           Case Study Style 01
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -428,7 +428,7 @@ const Header2 = ({ data }) => {
         </Link>
       </li>
       <li>
-        <Link href="/case-study/case-study2">
+        <Link href="/portfolio/portfolio2">
           Case Study Style 02
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -441,7 +441,7 @@ const Header2 = ({ data }) => {
         </Link>
       </li>
       <li>
-        <Link href="/case-study/case-study-details">
+        <Link href="/portfolio/portfolio-details">
           Case Study Details
           <svg
             xmlns="http://www.w3.org/2000/svg"

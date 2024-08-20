@@ -227,7 +227,7 @@ const AboutpageMain = ({ aboutOneData, steps, partners, awards, discover }) => {
 
       <Home5Blog /> */}
 
-      <div className="contact-section">
+    {/*  <div className="contact-section">
         <div className="container">
           <div className="row g-lg-4 gy-5">
             <div className="col-lg-5">
@@ -359,7 +359,7 @@ const AboutpageMain = ({ aboutOneData, steps, partners, awards, discover }) => {
                 </div>
               </div>
             </div>
-            <div
+         {   <div
               className="col-lg-7 wow animate fadeInUp"
               data-wow-delay="200ms"
               data-wow-duration="1500ms"
@@ -420,10 +420,10 @@ const AboutpageMain = ({ aboutOneData, steps, partners, awards, discover }) => {
                   </form>
                 </div>
               </div>
-            </div>
+            </div>}
           </div>
         </div>
-      </div>
+         </div>*/}
 
       {/* <footer className="footer-section">
         <div className="container">
