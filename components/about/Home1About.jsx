@@ -6,6 +6,7 @@ import Image from "next/image";
 import { InlineSvgPreviewComponent } from "../../lib/InlineSvgPreviewComponent";
 
 const Home1About = ({ data }) => {
+  console.log(data);
   return (
     <>
       {/* <div className="home1-about-section mb-110">
@@ -278,10 +279,9 @@ value={achive?.Icon} />
                   >
                     <div className="feature-card">
                       <div className="icon">
-                        <img
-                          src="assets/img/home1/icon/about-feature-card-icon1.svg"
-                          alt=""
-                        />
+                        {feature?.image && (
+                          <Image src={urlFor(feature?.image)?.url()} alt="" width={80} height={80} />
+                        )}
                       </div>
                       <div className="content">
                         <h4>{feature?.title}</h4>
