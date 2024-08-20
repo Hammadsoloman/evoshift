@@ -875,7 +875,7 @@ const Header3 = () => {
                       <div className="contact">
                         <span>Email Now</span>
                         <h6>
-                          <a href="#">info@examplegmail.com</a>
+                          <a href="#">info@evoshift.net</a>
                         </h6>
                       </div>
                     </li>
@@ -1045,7 +1045,7 @@ const Header3 = () => {
                 <div className="content">
                   <span>Any Question</span>
                   <h6>
-                    <a href="tel:+990737621432">+990-737 621 432</a>
+                    <a href="tel:+1(813)578-1111">+1(813)578-1111</a>
                   </h6>
                 </div>
               </div>

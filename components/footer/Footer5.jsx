@@ -179,7 +179,7 @@ const Footer5 = () => {
               <div className="col-xl-1 d-xl-block d-none">
                 <div className="contact-area">
                   <h2>
-                    <a href="mailto:info@example.com">info@example.com</a>
+                    <a href="mailto:info@evoshift.net">info@evoshift.net</a>
                   </h2>
                 </div>
               </div>

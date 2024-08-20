@@ -54,8 +54,8 @@ const Home4Footer = () => {
                             </Link>
                           </div>
                           <h2>
-                            <a href="mailto:info@example.com">
-                              info@example.com
+                            <a href="mailto:info@evoshift.net">
+                              info@evoshift.net
                             </a>
                           </h2>
                           {/* <div class="content">

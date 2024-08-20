@@ -36,7 +36,30 @@ const Home5whyChoose = ({ data }) => {
                 <p>{data?.desc}</p>
               </div>
             </div>
+            <ul className="mb-40" style={{ listStyleType: "circle",listStylePosition:"inside" }}>
+              <li>
+                We have an extensive experience in designing and developing
+                websites and web applications.
+              </li>
+              <li>
+                We have a professional team with extensive experience of
+                talented designers and developers.
+              </li>
+              <li>
+                We are committed to providing high-quality websites that meet
+                your needs.
+              </li>
+              <li>
+                We provide exceptional customer service to ensure customer
+                satisfaction wherever they are.
+              </li>
+              <li>
+                We provide high quality services at competitive prices to suit
+                all budgets.
+              </li>
+            </ul>
           </div>
+
           <div className="row g-lg-4 gy-5">
             <div
               className="col-lg-5 col-md-8 wow animate fadeInLeft"

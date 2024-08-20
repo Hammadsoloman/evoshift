@@ -1,11 +1,8 @@
-
 // -----------------
-import { groq } from 'next-sanity';
-import { client } from '../../../lib/sanity.client';
-import AboutOneMAin from './AboutMian'
+import { groq } from "next-sanity";
+import { client } from "../../../lib/sanity.client";
+import AboutOneMAin from "./AboutMian";
 export const revalidate = 30;
-
-
 
 const query = groq`
   *[_type=='aboutOne']{
@@ -13,10 +10,6 @@ const query = groq`
     
   } | order(_createdAt desc)
 `;
-
-
-
-
 
 const bannerquery = groq`
   *[_type=='Homebanner'] {
@@ -26,10 +19,7 @@ const bannerquery = groq`
   } | order(_createdAt desc)
 `;
 
-
-
 //partners
-
 
 const partnersquery = groq`
   *[_type=='service'] {
@@ -44,7 +34,7 @@ const stepsquery = groq`
     ...
     
    
-  } | order(_createdAt desc)
+  } | order(_createdAt asc)
 `;
 
 const discoverquery = groq`
@@ -55,7 +45,6 @@ const discoverquery = groq`
   } | order(_createdAt desc)
 `;
 
-
 const awardsquery = groq`
   *[_type=='aboutAwards'] {
     ...
@@ -63,7 +52,6 @@ const awardsquery = groq`
    
   } | order(_createdAt desc)
 `;
-
 
 const contactquery = groq`
   *[_type=='contact'] {
@@ -73,14 +61,11 @@ const contactquery = groq`
   } | order(_createdAt desc)
 `;
 
-
-
-
 export const metadata = {
   icons: {
     icon: "/assets/img/sm-logo.svg",
   },
-}
+};
 const AboutPage = async () => {
   const aboutOneData = await client.fetch(query);
   const partnersData = await client.fetch(partnersquery);
@@ -88,21 +73,19 @@ const AboutPage = async () => {
   const discoverData = await client.fetch(discoverquery);
   const awardsData = await client.fetch(awardsquery);
 
-console.log(discoverData[0])
+  console.log(discoverData[0]);
 
   return (
     <>
-    
-    <AboutOneMAin
-     aboutOneData={aboutOneData[0]}
-     steps={stepsData}
-     partners ={partnersData}
-     awards={awardsData[0]}
-     discover ={discoverData[0]}
-     />
-  
+      <AboutOneMAin
+        aboutOneData={aboutOneData[0]}
+        steps={stepsData}
+        partners={partnersData}
+        awards={awardsData[0]}
+        discover={discoverData[0]}
+      />
     </>
   );
-}
+};
 
 export default AboutPage;

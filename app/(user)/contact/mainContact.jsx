@@ -185,7 +185,7 @@ const ContactPageMain = ({ contact }) => {
                     <div className="content">
                       <span>To Send Mail</span>
                       <h6>
-                        <a href="mailto:info@example.com">{contact?.email}</a>
+                        <a href="mailto:info@evoshift.net">{contact?.email}</a>
                       </h6>
                     </div>
                   </div>

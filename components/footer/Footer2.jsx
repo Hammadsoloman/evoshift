@@ -233,7 +233,7 @@ const Footer2 = () => {
               <div className="content">
                 <span>Call Any Time</span>
                 <h6>
-                  <a href="tel:2-965-871-8617">2-965-871-8617</a>
+                  <a href="tel:+1(813)578-1111">+1(813)578-1111</a>
                 </h6>
               </div>
             </div>
@@ -280,7 +280,7 @@ const Footer2 = () => {
               <div className="content">
                 <span>Say Hello</span>
                 <h6>
-                  <a href="mailto:info@example.com">info@example.com</a>
+                  <a href="mailto:info@evoshift.net">info@evoshift.net</a>
                 </h6>
               </div>
             </div>

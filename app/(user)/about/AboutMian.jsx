@@ -144,32 +144,7 @@ const AboutpageMain = ({ aboutOneData, steps, partners, awards, discover }) => {
           </div>
         </div>
       </div>
-      <div div className="container">
-        <div className="mx-auto">
-          <ul className="mb-40" style={{ listStyleType: "circle" }}>
-            <li>
-              We have an extensive experience in designing and developing
-              websites and web applications.
-            </li>
-            <li>
-              We have a professional team with extensive experience of talented
-              designers and developers.
-            </li>
-            <li>
-              We are committed to providing high-quality websites that meet your
-              needs.
-            </li>
-            <li>
-              We provide exceptional customer service to ensure customer
-              satisfaction wherever they are.
-            </li>
-            <li>
-              We provide high quality services at competitive prices to suit all
-              budgets.
-            </li>
-          </ul>
-        </div>
-      </div>
+      
       <Home5whyChoose data={discover} />
 
       <div className="partnership-area mb-120">
@@ -313,7 +288,7 @@ const AboutpageMain = ({ aboutOneData, steps, partners, awards, discover }) => {
                     <div className="content">
                       <span>To More Inquiry</span>
                       <h6>
-                        <a href="tel:+990737621432">+990-737 621 432</a>
+                        <a href="tel:+1(813)578-1111">+1(813)578-1111</a>
                       </h6>
                     </div>
                   </div>
@@ -335,7 +310,7 @@ const AboutpageMain = ({ aboutOneData, steps, partners, awards, discover }) => {
                     <div className="content">
                       <span>To Send Mail</span>
                       <h6>
-                        <a href="mailto:info@example.com">info@gmail.com</a>
+                        <a href="mailto:info@evoshift.net">info@evoshift.net</a>
                       </h6>
                     </div>
                   </div>
@@ -716,7 +691,7 @@ const AboutpageMain = ({ aboutOneData, steps, partners, awards, discover }) => {
               <div className="content">
                 <span>Say Hello</span>
                 <h6>
-                  <a href="mailto:info@example.com">info@example.com</a>
+                  <a href="mailto:info@evoshift.net">info@evoshift.net</a>
                 </h6>
               </div>
             </div>
