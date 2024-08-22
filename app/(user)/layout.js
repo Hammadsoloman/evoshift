@@ -18,17 +18,6 @@ import ThemeSwitch from "../../components/common/Theme";
 import useWow from "../../hooks/useWow";
 import LiveChat from "../../components/chat/LiveChat";
 
-// const inter = Inter({
-//   subsets: ["latin"],
-//   variable: "--font-inter",
-//   display: "swap",
-// });
-
-// const hankenGrotesk = Hanken_Grotesk({
-//   subsets: ["latin"],
-//   variable: "--font-hankenGrotesk",
-//   display: "swap",
-// });
 export default function RootLayout({ children }) {
   useWow();
 
