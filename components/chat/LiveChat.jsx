@@ -21,7 +21,7 @@ export default function LiveChat() {
       s.parentNode.insertBefore(g,s);
       g.onload=function(){
         window.chatwootSDK.run({
-          websiteToken: 'RQ7c6jFvqyhr42GWLxGsiXqK',
+          websiteToken: 'fMAbBBSktKapvnZAoS3EN6Pk',
           baseUrl: BASE_URL
         })
       }
