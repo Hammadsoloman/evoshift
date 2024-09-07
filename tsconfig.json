@@ -33,7 +33,7 @@
     "app/studio/[[...index]]",
     "components/slider.jsx",
     "sanity.config.ts"
-  ],
+, "app/(user)/package-details/[priceId]/page.jsx", "app/(user)/faqs/page.jsx", "pages/api/stripe/checkout.js"  ],
   "exclude": [
     "node_modules"
   ],

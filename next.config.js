@@ -29,6 +29,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  env: {
+    baseUrl:
+      process.env.NODE_ENV === "production"
+        ? "https://www.evoshift.net"
+        : "http://localhost:3000",
+  },
   swcMinify: true,
   // images: {
   //   domains: ["i.imgur.com", "cdn.sanity.io"],
