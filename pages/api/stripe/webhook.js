@@ -43,10 +43,10 @@ export default async function POST(req, res) {
       //Send order confirmation email
       try {
         const result = await transporter.sendMail({
-          to:
-            process.env.NODE_ENV === "production"
-              ? customerDetails.email
-              : "merazgatest@gmail.com",
+          to: "merazgatest@gmail.com",
+          //   process.env.NODE_ENV === "production"
+          //     ? customerDetails.email
+          //     : "merazgatest@gmail.com",
           from: process.env.EMAIL_FROM_ORDERS,
           subject: "EvoShift Receipt!",
           html: `<div>${await render(
