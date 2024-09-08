@@ -56,7 +56,7 @@ export default function CheckoutForm({ dpmCheckerLink, priceId }) {
         <button
           disabled={isLoading || !stripe || !elements}
           id="submit"
-          className="primary-btn1 mt-4"
+          className={`primary-btn1 mt-4 ${!stripe || !elements ? "hidden" : "block"}`}
           data-text="Pay now"
         >
           <span id="button-text">
