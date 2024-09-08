@@ -61,7 +61,7 @@ const Header2 = ({ data }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const headerRef = useRef(null);
 
-  console.log("ASSAS", navData);
+
 
   const handleScroll = () => {
     const { scrollY } = window;

@@ -1,3 +1,4 @@
+"use client";
 import MainLayout from "../../../../components/layout/MainLayout";
 
 import { Elements } from "@stripe/react-stripe-js";
@@ -6,16 +7,12 @@ import { loadStripe } from "@stripe/stripe-js";
 // Make sure to call loadStripe outside of a component’s render to avoid
 // recreating the Stripe object on every render.
 // This is your test publishable API key.
-const stripePromise = loadStripe(
-  process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY
-);
+const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY);
 import CheckoutForm from "../../../../components/stripe/CheckoutForm";
 import CompletePage from "../../../../components/stripe/CompletePage";
 import { useEffect, useState } from "react";
 
-export default function Main({ contact, priceId }) {
-  const [price, setPrice] = useState(null);
-  const [product, setProduct] = useState(null);
+export default function Main({ contact, priceId, packageDetails }) {
   const [clientSecret, setClientSecret] = useState("");
   const [dpmCheckerLink, setDpmCheckerLink] = useState("");
   const [confirmed, setConfirmed] = useState(false);
@@ -31,34 +28,18 @@ export default function Main({ contact, priceId }) {
   useEffect(() => {
     //Get Service details from Stripe
     // Create PaymentIntent as soon as the page loads
-
-    fetch("/api/stripe/checkout", {
+    if (!packageDetails?.price) return;
+    console.log("start payment intent");
+    fetch("/api/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ priceId: priceId }),
+      body: JSON.stringify({ stripePrice: packageDetails.price }),
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log("Details:", data);
-        if (data.ok) {
-          setPrice(data.price);
-          setProduct(data.product);
-
-          // Create PaymentIntent as soon as the page loads
-          fetch("/api/create-payment-intent", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({  stripePrice: data.price }),
-          })
-            .then((res) => res.json())
-            .then((data) => {
-              setClientSecret(data.clientSecret);
-              // [DEV] For demo purposes only
-              //setDpmCheckerLink(data.dpmCheckerLink);
-            });
-        } else {
-          console.log("Invalid package");
-        }
+        setClientSecret(data.clientSecret);
+        // [DEV] For demo purposes only
+        //setDpmCheckerLink(data.dpmCheckerLink);
       });
   }, []);
 
@@ -74,21 +55,35 @@ export default function Main({ contact, priceId }) {
     <MainLayout contact={contact}>
       <div className="container pt-120">
         <div className="row">
-          <div className="col-6">
-            <h2>Packages Information</h2>
-            <p>Package Name: {product?.name} </p>
-            <p>Package Description: {product?.description} </p>
-            <p>
-              Package Price: {price?.unit_amount / 100} {price?.currency}{" "}
-            </p>
+          <div className="col-sm-12 col-md-6 gap-2 p-2">
+            {packageDetails?.ok ? (
+              <>
+                <h2>
+                  <u>Packages Information </u>{" "}
+                </h2>
+                <h3>Package Name: {packageDetails?.product?.name} </h3>
+                <h3>
+                  Package Description: {packageDetails?.product?.description}
+                </h3>
+                <h3>
+                  Package Price: {packageDetails?.price?.unit_amount / 100}{" "}
+                  {packageDetails?.price?.currency?.toUpperCase()}
+                </h3>
+              </>
+            ) : (
+              <p>Invalid package</p>
+            )}
           </div>
-          <div className="col-6">
+          <div className="col-sm-12 col-md-6 p-2">
             {clientSecret && (
               <Elements options={options} stripe={stripePromise}>
                 {confirmed ? (
                   <CompletePage />
                 ) : (
-                  <CheckoutForm dpmCheckerLink={dpmCheckerLink} priceId={priceId} />
+                  <CheckoutForm
+                    dpmCheckerLink={dpmCheckerLink}
+                    priceId={priceId}
+                  />
                 )}
               </Elements>
             )}
