@@ -21,7 +21,7 @@ export default async function Checkout({ params }) {
     }
   ).then((res) => res.json());
 
-  console.log(packageDetails);
+
 
   return (
     <>

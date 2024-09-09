@@ -29,7 +29,7 @@ export default function Main({ contact, priceId, packageDetails }) {
     //Get Service details from Stripe
     // Create PaymentIntent as soon as the page loads
     if (!packageDetails?.price) return;
-    console.log("start payment intent");
+   
     fetch("/api/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -52,7 +52,7 @@ export default function Main({ contact, priceId, packageDetails }) {
   };
 
   return (
-    <MainLayout contact={contact}>
+    <MainLayout contact={contact} pageTitle="Payment" >
       <div className="container pt-120">
         <div className="row">
           <div className="col-sm-12 col-md-6 gap-2 p-2">
@@ -69,6 +69,12 @@ export default function Main({ contact, priceId, packageDetails }) {
                   Package Price: {packageDetails?.price?.unit_amount / 100}{" "}
                   {packageDetails?.price?.currency?.toUpperCase()}
                 </h3>
+                {packageDetails?.price?.recurring?.interval && (
+                  <h3>
+                    Recurring interval:{" "}
+                    {packageDetails?.price?.recurring?.interval?.toUpperCase()}
+                  </h3>
+                )}
               </>
             ) : (
               <p>Invalid package</p>

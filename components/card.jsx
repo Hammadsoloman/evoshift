@@ -7,7 +7,7 @@ import urlFor from '../lib/urlFor';
 
 export default function LegalSearchCard({ data, animationDelay }) {
   const { heading , description} = data;
-  console.log("DATA--->" ,data)
+
   const [isHovered, setIsHovered] = useState(false); // Use state to track hover
 
   return (

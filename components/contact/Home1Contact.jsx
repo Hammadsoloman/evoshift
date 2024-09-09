@@ -17,7 +17,7 @@ const Home1Contact = ({ contact }) => {
 
   const submit = (e) => {
     e.preventDefault();
-    console.log("clicked btn");
+  
     sendMessage();
   };
 

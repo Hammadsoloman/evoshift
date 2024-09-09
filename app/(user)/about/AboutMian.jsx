@@ -21,7 +21,7 @@ import useWow from "../../../hooks/useWow";
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 
 const AboutpageMain = ({ aboutOneData, steps, partners, awards, discover }) => {
-  console.log(">>>>>>>>>>", partners);
+
   useWow();
   const settings = useMemo(() => {
     return {

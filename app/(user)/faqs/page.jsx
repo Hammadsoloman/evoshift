@@ -31,7 +31,7 @@ export const metadata = {
 const FaqsPage = async () => {
   const faqsData = await client.fetch(query);
 const contact = await client.fetch(contactquery);
-  console.log(faqsData[0]);
+
 
   return (
     <>

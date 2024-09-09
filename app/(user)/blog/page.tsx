@@ -57,7 +57,7 @@ export default function Page() {
       setPosts([...blogs]);
       // setPosts([...posts, ...blogs]);
       // setOffset(offset + 1);
-      console.log(blogs);
+   
     } else {
       const productFilter = `_type == "post"`;
       const categoryFilter = cat ? `&& "${cat}" in categories[]->title ` : "";
@@ -71,7 +71,7 @@ export default function Page() {
       setPosts([...blogs]);
       setPosts([...posts, ...blogs]);
       setOffset(offset + 2);
-      console.log(blogs);
+
     }
   };
 
@@ -88,7 +88,7 @@ export default function Page() {
   const getNewPosts = async () => {
     const newData = await client.fetch(nepostsquery);
     setNewPosts(newData);
-    console.log(newposts);
+  
   };
 
   useEffect(() => {

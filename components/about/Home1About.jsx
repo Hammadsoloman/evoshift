@@ -6,7 +6,7 @@ import Image from "next/image";
 import { InlineSvgPreviewComponent } from "../../lib/InlineSvgPreviewComponent";
 
 const Home1About = ({ data }) => {
-  console.log(data);
+ 
   return (
     <>
       {/* <div className="home1-about-section mb-110">

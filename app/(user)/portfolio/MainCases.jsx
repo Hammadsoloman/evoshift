@@ -9,7 +9,7 @@ const MainCases = ({ cases, contact, loadMore }) => {
 
   useWow();
   return (
-    <MainLayout contact={contact}>
+    <MainLayout contact={contact} pageTitle={"Portfolio"} >
       <div
         className="case-study-card-section scroll-margin pt-120 mb-120"
         id="case-study-card-section"

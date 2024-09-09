@@ -10,8 +10,9 @@ import Marquee from "react-fast-marquee";
 
 const CaseStudyDetails = ({ casedata, contact }) => {
   useWow();
+
   return (
-    <MainLayout contact={contact}>
+    <MainLayout contact={contact} pageTitle={casedata.title} >
       <div
         className="case-study-details-page pt-120 mb-120"
         id="case-details-section"

@@ -15,7 +15,7 @@ const Blogpage = ({
 }) => {
   useWow();
 
-  console.log("BLOGSSSSSSSS????", blogs);
+
 
   const router = useRouter();
 

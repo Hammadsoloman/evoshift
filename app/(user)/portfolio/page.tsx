@@ -49,7 +49,7 @@ const [cases, setCases] = useState<any[]>([]);
 
     setCases([...cases, ...casesdata]);
     setOffset(offset + 2);
-    console.log(cases);
+
   };
 
   const getContacts = async () => {

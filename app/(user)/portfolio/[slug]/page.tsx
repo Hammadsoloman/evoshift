@@ -37,11 +37,11 @@ type Props = {
 
 const CaseDetailPage  = async ({ params }: { params: { slug: string } }) => {
   const { slug } = params;
-  console.log(slug,"lllll")
+
 
   const casedata = await client.fetch(query, { slug }) || [];
 const contact = await client.fetch(contactquery);
-console.log(casedata,"dffdgfd")
+
   return (
     <section
       id="section"

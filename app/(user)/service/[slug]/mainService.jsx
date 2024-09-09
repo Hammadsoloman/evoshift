@@ -8,7 +8,7 @@ import { PortableText } from "@portabletext/react";
 import { RichTextComponents } from "../../../../components/RichTextComponents";
 
 export default function mainService({ data, contact }) {
-  console.log("INNNNNNNNNNSASASAS", data);
+
 
   return (
     <MainLayout contact={contact} pageTitle={data?.heading}>

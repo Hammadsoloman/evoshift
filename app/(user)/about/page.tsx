@@ -73,7 +73,7 @@ const AboutPage = async () => {
   const discoverData = await client.fetch(discoverquery);
   const awardsData = await client.fetch(awardsquery);
 
-  console.log(discoverData[0]);
+  
 
   return (
     <>

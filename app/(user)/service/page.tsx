@@ -31,7 +31,7 @@ const Services = async () => {
   const services = await client.fetch(query);
   const contact = await client.fetch(contactquery);
 
-  console.log(services)
+
 
   return (
     <>
