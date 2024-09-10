@@ -29,7 +29,8 @@ export default function Main({ contact, priceId, packageDetails }) {
     //Get Service details from Stripe
     // Create PaymentIntent as soon as the page loads
     if (!packageDetails?.price) return;
-   
+    if (confirmed) return;
+
     fetch("/api/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -52,7 +53,7 @@ export default function Main({ contact, priceId, packageDetails }) {
   };
 
   return (
-    <MainLayout contact={contact} pageTitle="Payment" >
+    <MainLayout contact={contact} pageTitle="Payment">
       <div className="container pt-120">
         <div className="row">
           <div className="col-sm-12 col-md-6 gap-2 p-2">
@@ -83,9 +84,7 @@ export default function Main({ contact, priceId, packageDetails }) {
           <div className="col-sm-12 col-md-6 p-2">
             {clientSecret && (
               <Elements options={options} stripe={stripePromise}>
-                {confirmed ? (
-                  <CompletePage />
-                ) : (
+                {!confirmed && (
                   <CheckoutForm
                     dpmCheckerLink={dpmCheckerLink}
                     priceId={priceId}

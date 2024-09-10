@@ -27,7 +27,7 @@ export default function CheckoutForm({ dpmCheckerLink, priceId }) {
       elements,
       confirmParams: {
         // Make sure to change this to your payment completion page
-        return_url: `${process.env.baseUrl}/package-details/${priceId}`,
+        return_url: `${process.env.baseUrl}/package-details`,
       },
     });
 
