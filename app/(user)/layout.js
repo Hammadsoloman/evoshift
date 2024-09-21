@@ -16,7 +16,8 @@ import "../../public/assets/css/style.css";
 import ScrollProgress from "../../components/common/ScrollProgress";
 import ThemeSwitch from "../../components/common/Theme";
 import useWow from "../../hooks/useWow";
-import LiveChat from "../../components/chat/LiveChat";
+//import LiveChat from "../../components/chat/LiveChat";
+import Script from "next/script";
 
 export default function RootLayout({ children }) {
   useWow();
@@ -42,7 +43,11 @@ export default function RootLayout({ children }) {
         <ScrollProgress />
         <ThemeSwitch />
         {children}
-        <LiveChat/>
+        {/*<LiveChat/>*/}
+        <Script
+          strategy="lazyOnload"
+          src="https://embed.tawk.to/66ef21c5e5982d6c7bb27f53/1i8b1nqm3"
+        />
         <script src="/evoshift.min.js" async defer />
       </body>
     </html>
