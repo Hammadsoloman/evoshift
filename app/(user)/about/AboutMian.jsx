@@ -21,7 +21,6 @@ import useWow from "../../../hooks/useWow";
 SwiperCore.use([Autoplay, EffectFade, Navigation, Pagination]);
 
 const AboutpageMain = ({ aboutOneData, steps, partners, awards, discover }) => {
-
   useWow();
   const settings = useMemo(() => {
     return {
@@ -77,25 +76,25 @@ const AboutpageMain = ({ aboutOneData, steps, partners, awards, discover }) => {
             <span className="sub-title5 two">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width={14}
-                height={14}
+                width={48}
+                height={48}
                 viewBox="0 0 14 14"
               >
                 <path d="M3.7081 12.9544C3.41861 13.1128 3.09011 12.8352 3.14861 12.4808L3.7711 8.69694L1.12886 6.01223C0.882112 5.76104 1.01036 5.30186 1.34111 5.25226L5.0146 4.69548L6.6526 1.23399C6.80035 0.922003 7.2001 0.922003 7.34785 1.23399L8.98584 4.69548L12.6593 5.25226C12.9901 5.30186 13.1183 5.76104 12.8708 6.01223L10.2293 8.69694L10.8518 12.4808C10.9103 12.8352 10.5818 13.1128 10.2923 12.9544L6.9991 11.1497L3.7081 12.9544Z" />
               </svg>
-              Working Process
+              <h2> Working Process</h2>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width={14}
-                height={14}
+                width={48}
+                height={48}
                 viewBox="0 0 14 14"
               >
                 <path d="M3.7081 12.9544C3.41861 13.1128 3.09011 12.8352 3.14861 12.4808L3.7711 8.69694L1.12886 6.01223C0.882112 5.76104 1.01036 5.30186 1.34111 5.25226L5.0146 4.69548L6.6526 1.23399C6.80035 0.922003 7.2001 0.922003 7.34785 1.23399L8.98584 4.69548L12.6593 5.25226C12.9901 5.30186 13.1183 5.76104 12.8708 6.01223L10.2293 8.69694L10.8518 12.4808C10.9103 12.8352 10.5818 13.1128 10.2923 12.9544L6.9991 11.1497L3.7081 12.9544Z" />
               </svg>
             </span>
-            <h2>
+            <h3>
               Bringing the best IT <span> Vendors To You.</span>
-            </h2>
+            </h3>
           </div>
         </div>
         <div className="container-fluid p-0">
@@ -114,7 +113,7 @@ const AboutpageMain = ({ aboutOneData, steps, partners, awards, discover }) => {
                           <div className="single-process">
                             <div className="step">
                               <div className="number">
-                                <h6>Step</h6>
+                                
                                 <span>{index + 1}</span>
                               </div>
                             </div>
@@ -144,10 +143,10 @@ const AboutpageMain = ({ aboutOneData, steps, partners, awards, discover }) => {
           </div>
         </div>
       </div>
-      
+
       <Home5whyChoose data={discover} />
 
-      <div className="partnership-area mb-120">
+ {/*     <div className="partnership-area mb-120">
         <div className="container">
           <div className="row">
             <div
@@ -159,7 +158,7 @@ const AboutpageMain = ({ aboutOneData, steps, partners, awards, discover }) => {
                 <h2>What we offer to our clients</h2>
               </div>
               <div className="total-partner">
-                {/* <a href="about.html">
+                 <a href="about.html">
                   Almost 20+ Partner we have
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -169,11 +168,11 @@ const AboutpageMain = ({ aboutOneData, steps, partners, awards, discover }) => {
                   >
                     <path d="M8.33624 2.84003L1.17627 10L0 8.82373L7.15914 1.66376H0.849347V0H10V9.15065H8.33624V2.84003Z" />
                   </svg>
-                </a>*/}
+                </a>
               </div>
             </div>
           </div>
-          <div className="row g-4">
+     {     <div className="row g-4">
             <p>
               We take pride in providing professional website development
               services that meet our clients' diverse needs. Our talented team
@@ -217,9 +216,9 @@ const AboutpageMain = ({ aboutOneData, steps, partners, awards, discover }) => {
                 </div>
               );
             })}
-          </div>
+          </div>}
         </div>
-      </div>
+          </div>*/}
 
       <Home4award data={awards} />
 
@@ -227,7 +226,7 @@ const AboutpageMain = ({ aboutOneData, steps, partners, awards, discover }) => {
 
       <Home5Blog /> */}
 
-    {/*  <div className="contact-section">
+      {/*  <div className="contact-section">
         <div className="container">
           <div className="row g-lg-4 gy-5">
             <div className="col-lg-5">

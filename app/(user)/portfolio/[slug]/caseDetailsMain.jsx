@@ -12,7 +12,7 @@ const CaseStudyDetails = ({ casedata, contact }) => {
   useWow();
 
   return (
-    <MainLayout contact={contact} pageTitle={casedata.title} >
+    <MainLayout contact={contact} pageTitle={casedata.title}>
       <div
         className="case-study-details-page pt-120 mb-120"
         id="case-details-section"
@@ -156,6 +156,33 @@ const CaseStudyDetails = ({ casedata, contact }) => {
                         <h5>{casedata?.stack}</h5>
                       </div>
                     </li>
+                    {casedata?.url && (
+                      <li>
+                        <div className="icon">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width={34}
+                            height={23}
+                            viewBox="0 0 34 23"
+                            fill="none"
+                          >
+                            <path
+                              d="M-4.5897e-07 11.5L33 11.5M33 11.5C28.6786 10.8824 20.1536 7.91765 20.625 1M33 11.5C28.4821 12.7353 19.6821 16.5647 20.625 22"
+                              strokeWidth={2}
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <div className="content">
+                          <span>Website:</span>
+                          <h5>
+                            <a href={casedata?.url} target="_blank">
+                              {casedata?.url}
+                            </a>
+                          </h5>
+                        </div>
+                      </li>
+                    )}
                   </ul>
                 </div>
                 {/* <div className="social-share-area">

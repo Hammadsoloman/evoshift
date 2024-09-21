@@ -66,11 +66,11 @@ export default function Page() {
 
       const blogs = await client.fetch(groq`${filter} {
   ...
-  } | order(_createdAt desc) [${offset}...${offset + 2}] `);
+  } | order(_createdAt desc) [${offset}...${offset + 6}] `);
 
       setPosts([...blogs]);
       setPosts([...posts, ...blogs]);
-      setOffset(offset + 2);
+      setOffset(offset + 6);
 
     }
   };

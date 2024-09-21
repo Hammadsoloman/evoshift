@@ -81,29 +81,28 @@ const Home1Solution = ({ data }) => {
                   data-wow-duration="1500ms"
                 >
                   <div className="service-card">
-                    <div className="content">
-                      <h4>
-                        <Link href={`/service/${item?.slug?.current}`}>
-                          {item?.heading}
-                        </Link>
-                      </h4>
+                    <Link href={`/service/${item?.slug?.current}`}>
+                      {" "}
+                      <div className="content">
+                        <h4>{item?.heading}</h4>
 
-                      <h4 className="!h-[18px] !w-[18px]">
-                        <InlineSvgPreviewComponent
-                          style={{
-                            width: "42px !important",
-                            height: "42px",
-                            marginRight: "8px",
-                            flexShrink: "0",
-                          }}
-                          value={item?.sidebarIcon}
-                        />
+                        <h4 className="!h-[18px] !w-[18px]">
+                          <InlineSvgPreviewComponent
+                            style={{
+                              width: "42px !important",
+                              height: "42px",
+                              marginRight: "8px",
+                              flexShrink: "0",
+                            }}
+                            value={item?.sidebarIcon}
+                          />
 
-                        {/* <Icon value={item?.sidebarIcon} /> */}
-                      </h4>
+                          {/* <Icon value={item?.sidebarIcon} /> */}
+                        </h4>
 
-                      <p className="clamping-5">{item?.desc}</p>
-                    </div>
+                        <p className="clamping-5">{item?.desc}</p>
+                      </div>{" "}
+                    </Link>
                     <Link
                       href={`/service/${item?.slug?.current}`}
                       className="explore-btn"
@@ -127,14 +126,14 @@ const Home1Solution = ({ data }) => {
           </div>
         </div>
         <style jsx global>{`
-        .clamping-5 {
-          overflow: hidden;
-          text-overflow: ellipsis;
-          display: -webkit-box;
-          -webkit-line-clamp: 5; /* number of lines to show */
-          -webkit-box-orient: vertical;
-        }
-      `}</style>
+          .clamping-5 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 5; /* number of lines to show */
+            -webkit-box-orient: vertical;
+          }
+        `}</style>
       </div>
     </>
   );

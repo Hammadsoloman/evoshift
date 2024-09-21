@@ -3,8 +3,6 @@ import Marquee from "react-fast-marquee";
 import urlFor from "../../lib/urlFor";
 import Image from "next/image";
 const LogoMarquee = ({ brandsData }) => {
-  console.log(">>>ASASAS<<<<<", brandsData);
-
   return (
     <div
       className="logo-section mb-110 wow animate fadeInUp"

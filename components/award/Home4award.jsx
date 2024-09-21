@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 import urlFor from "../../lib/urlFor";
 
-const Home4award = ({data}) => {
+const Home4award = ({ data }) => {
   const followImageCursor = (event, serviceImgItem) => {
     const contentBox = serviceImgItem.getBoundingClientRect();
     const dx = event.clientX - contentBox.x;
@@ -40,8 +40,8 @@ const Home4award = ({data}) => {
             >
               <div className="section-title-wrap">
                 <div className="section-title3 mb-40">
-                  <span>
-                    <svg
+                  <h2 className="mb-5" >
+                    {/*   <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={10}
                       height={10}
@@ -50,12 +50,10 @@ const Home4award = ({data}) => {
                       <g>
                         <circle cx={5} cy={5} r={5} />
                       </g>
-                    </svg>
+  </svg>*/}
                     {data?.heading}
-                  </span>
-                  <h2>
-                    {data?.title}
                   </h2>
+                  <p>{data?.title}</p>
                 </div>
                 {/*<Link href="/about" className="details-button">
                   About Us More
@@ -128,45 +126,39 @@ const Home4award = ({data}) => {
             </div>
             <div className="col-lg-7">
               <div className="sevices-wrap2">
-
-
-              {data?.awardslist?.map((item, index) => {
-return (
-
-                <div
-                key={index}
-                  className="single-services wow animate fadeInDown"
-                  data-wow-delay="200ms"
-                  data-wow-duration="1500ms"
-                >
-                  <div className="content">
-                    <span>{item?.time}</span>
-                    <h5>{item?.title}</h5>
-                    {/* <p>Site Of The Day</p> */}
-                  </div>
-                  <Link className="explore-btn" href="/about">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width={16}
-                      height={16}
-                      viewBox="0 0 16 16"
+                {data?.awardslist?.map((item, index) => {
+                  return (
+                    <div
+                      key={index}
+                      className="single-services wow animate fadeInDown"
+                      data-wow-delay="200ms"
+                      data-wow-duration="1500ms"
                     >
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M13.582 1.41649L0 14.9978L1.00217 16L14.5835 2.41795L14.5835 11.8086H16L16 0L4.1914 0V1.41649L13.582 1.41649Z"
-                      />
-                    </svg>
-                  </Link>
-                  <div className="services-img">
-                    <img 
-                      src={urlFor(item?.image).url()} 
-                    alt="" />
-                  </div>
-                </div>
-
-)})}
-               
+                      <div className="content">
+                        <span>{item?.time}</span>
+                        <p>{item?.title}</p>
+                        {/* <p>Site Of The Day</p> */}
+                      </div>
+                      <Link className="explore-btn" href="/about">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width={16}
+                          height={16}
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            clipRule="evenodd"
+                            d="M13.582 1.41649L0 14.9978L1.00217 16L14.5835 2.41795L14.5835 11.8086H16L16 0L4.1914 0V1.41649L13.582 1.41649Z"
+                          />
+                        </svg>
+                      </Link>
+                      <div className="services-img">
+                        <img src={urlFor(item?.image).url()} alt="" />
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>

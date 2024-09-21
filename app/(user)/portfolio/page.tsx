@@ -44,11 +44,11 @@ const [cases, setCases] = useState<any[]>([]);
            ...,
           
            category->
-         } | order(_createdAt desc) [${offset}...${offset + 2}] 
+         } | order(_createdAt desc) [${offset}...${offset + 6}] 
        `);
 
     setCases([...cases, ...casesdata]);
-    setOffset(offset + 2);
+    setOffset(offset + 6);
 
   };
 

@@ -2,7 +2,7 @@
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 const calculateOrderAmount = (stripePrice) => {
-  console.log("mmmm", stripePrice);
+
   // Replace this constant with a calculation of the order's amount
   // Calculate the order total on the server to prevent
   // people from directly manipulating the amount on the client
@@ -12,7 +12,7 @@ const calculateOrderAmount = (stripePrice) => {
 
 export default async function handler(req, res) {
   const { stripePrice } = req.body;
-  console.log("mmmm", stripePrice);
+ 
   // Create a PaymentIntent with the order amount and currency
   const paymentIntent = await stripe.paymentIntents.create({
     amount: calculateOrderAmount(stripePrice),

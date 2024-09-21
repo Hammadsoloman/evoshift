@@ -8,8 +8,6 @@ import { PortableText } from "@portabletext/react";
 import { RichTextComponents } from "../../../../components/RichTextComponents";
 
 export default function mainService({ data, contact }) {
-
-
   return (
     <MainLayout contact={contact} pageTitle={data?.heading}>
       {/*     <div
@@ -160,24 +158,25 @@ return (
         </div>
       </div>
 */}
-      <div
-        className="service-details-page pt-120 mb-120"
-        id="service-details-section"
-      >
-        <div className="blog-details-content">
-          <div className="row justify-content-center g-4">
-            <div className="col-lg-8">
-              <div className=" mt-24 mx-12">
-                <PortableText
-                  value={data?.body}
-                  components={RichTextComponents}
-                />
+      <div className="container ">
+        <div
+          className="service-details-page pt-120 mb-120"
+          id="service-details-section"
+        >
+          <div className="blog-details-content">
+            <div className="row justify-content-center g-4">
+              <div className="col-lg-12">
+                <div className="  mt-24 mx-12">
+                  <PortableText
+                    value={data?.body}
+                    components={RichTextComponents}
+                  />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
       {/*    <Home5Workprocess steps={data?.steps} />
 
       <div className="service-details-feature-section mb-120">

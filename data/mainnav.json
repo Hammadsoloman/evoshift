@@ -1,57 +1,44 @@
 [
-    {
-        "id": "1",
-        "label": "Home",
-        "link": "/"
-     
-     
-    },
+  {
+    "id": "1",
+    "label": "Home",
+    "link": "/"
+  },
+  {
+    "id": "2",
+    "label": "About",
+    "link": "/about",
+    "icon": false
+  },
+  {
+    "id": "3",
+    "label": "Services",
+    "link": "/service",
+    "icon": false
+  },
+  {
+    "id": "4",
+    "label": "Portfolio",
+    "link": "/portfolio",
+    "icon": false
+  },
+  {
+    "id": "5",
+    "label": "FAQ",
+    "link": "/faqs",
+    "icon": false
+  },
+  {
+    "id": "6",
+    "label": "Blog",
+    "link": "/blog",
+    "icon": false
+  },
 
-    {
-        "id": "2",
-        "label": "Blogs",
-        "link": "/blog",
-        "icon": false
-    },
-
-    {
-        "id": "3",
-        "label": "services",
-        "link": "/service",
-        "icon": false
-    },
- 
-
-    {
-        "id": "4",
-        "label": "Portfolio",
-        "link": "/portfolio",
-        "icon": false
-    },
- 
-    {
-        "id": "5",
-        "label": "Faqs",
-        "link": "/faqs",
-        "icon": false
-    },
-
-    {
-        "id": "6",
-        "label": "About",
-        "link": "/about",
-        "icon": false
-    },
- 
- 
-
-
-
- 
-    {
-        "id": "7",
-        "label": "Contact",
-        "link": "/contact",
-        "icon": false
-    }
+  {
+    "id": "7",
+    "label": "Contact",
+    "link": "/contact",
+    "icon": false
+  }
 ]

@@ -24,29 +24,28 @@ const ServicesPage = ({ services, contact }) => {
                   data-wow-duration="1500ms"
                 >
                   <div className="service-card two">
-                    <div className="content">
-                      <h4>
-                        <Link href={`/service/${item?.slug?.current}`}>
-                          {item?.heading}
-                        </Link>
-                      </h4>
+                    <Link href={`/service/${item?.slug?.current}`}>
+                      {" "}
+                      <div className="content">
+                        <h4>{item?.heading}</h4>
 
-                      <h4 className="!h-[18px] !w-[18px]">
-                        <InlineSvgPreviewComponent
-                          style={{
-                            width: "42px !important",
-                            height: "42px",
-                            marginRight: "8px",
-                            flexShrink: "0",
-                          }}
-                          value={item?.sidebarIcon}
-                        />
+                        <h4 className="!h-[18px] !w-[18px]">
+                          <InlineSvgPreviewComponent
+                            style={{
+                              width: "42px !important",
+                              height: "42px",
+                              marginRight: "8px",
+                              flexShrink: "0",
+                            }}
+                            value={item?.sidebarIcon}
+                          />
 
-                        {/* <Icon value={item?.sidebarIcon} /> */}
-                      </h4>
+                          {/* <Icon value={item?.sidebarIcon} /> */}
+                        </h4>
 
-                      <p className="clamping-5">{item?.desc}</p>
-                    </div>
+                        <p className="clamping-5">{item?.desc}</p>
+                      </div>{" "}
+                    </Link>
                     <Link
                       href={`/service/${item?.slug?.current}`}
                       className="explore-btn"

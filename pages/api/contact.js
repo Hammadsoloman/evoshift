@@ -60,7 +60,7 @@ async function sendEmail({ name, email, phone,company,message,subject }) {
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
-    console.log("DATA-,", req.body);
+  
     const emailRes = await sendEmail(req.body);
     if (emailRes.messageId) {
       return res.status(200).json({ message: `Email sent successfuly` });

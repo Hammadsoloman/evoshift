@@ -44,6 +44,12 @@ export default defineType({
     }),
 
     defineField({
+      name: "url",
+      title: "URL",
+      type: "string",
+    }),
+
+    defineField({
       name: "mainImage",
       title: "Main image",
       type: "image",

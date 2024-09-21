@@ -5,6 +5,7 @@ import Image from "next/image";
 import LogoDark from "../../public/assets/img/logo.png";
 import LogoLight from "../../public/assets/img/logo-light.png";
 import navData from "../../data/mainnav.json";
+import { ContactInfo } from "../../lib/contact";
 const initialState = {
   activeMenu: "",
   activeSubMenu: "",
@@ -852,7 +853,9 @@ const Header2 = ({ data }) => {
                       <div className="contact">
                         <span>Phone</span>
                         <h6>
-                          <a href="#">{data?.phone}</a>
+                        <a href={`tel:${ContactInfo?.phone}`}>
+                            {ContactInfo?.phone}
+                          </a>
                         </h6>
                       </div>
                     </li>
@@ -870,7 +873,9 @@ const Header2 = ({ data }) => {
                       <div className="contact">
                         <span>Email Now</span>
                         <h6>
-                          <a href="#">{data?.email}</a>
+                        <a href={`mailto:${ContactInfo.email}`}>
+                            {ContactInfo.email}
+                          </a>
                         </h6>
                       </div>
                     </li>
@@ -887,7 +892,7 @@ const Header2 = ({ data }) => {
                         </svg>
                       </div>
                       <div className="contact">
-                        <h6>{data?.footeraddress}</h6>
+                      <h6>{ContactInfo?.address}</h6>
                       </div>
                     </li>
                   </ul>
@@ -906,18 +911,18 @@ const Header2 = ({ data }) => {
                   </h6>
                   <ul className="social-area">
                     <li>
-                      <a href={data?.linkden}>
+                      <a href={ContactInfo?.linkedin} target="_blank">
                         <i className="bi bi-linkedin" />
                         <span>LinkedIn</span>
                       </a>
                     </li>
                     <li>
-                      <a href={data?.facebook}>
+                      <a href={ContactInfo?.facebook} target="_blank">
                         <i className="bi bi-facebook" />
                         <span>Facebook</span>
                       </a>
                     </li>
-                    <li>
+                   {/* <li>
                       <a href={data?.twitter}>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -931,9 +936,9 @@ const Header2 = ({ data }) => {
                         </svg>
                         <span>Twitter</span>
                       </a>
-                    </li>
+  </li>*/}
                     <li>
-                      <a href={data?.instagram}>
+                      <a href={ContactInfo?.instagram} target="_blank">
                         <i className="bi bi-instagram" />
                         <span>Instagram</span>
                       </a>
