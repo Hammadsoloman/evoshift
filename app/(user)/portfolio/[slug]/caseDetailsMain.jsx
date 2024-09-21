@@ -37,7 +37,10 @@ const CaseStudyDetails = ({ casedata, contact }) => {
 
             {/* //sidebaark */}
             <div className="col-lg-4">
-              <div className="case-sidebar">
+              <div
+                className="case-sidebar"
+                style={{ textOverflow: "ellipsis", overflow: "hidden" }}
+              >
                 <div className="case-info-wrap mb-40">
                   <h4>
                     <svg
@@ -175,8 +178,17 @@ const CaseStudyDetails = ({ casedata, contact }) => {
                         </div>
                         <div className="content">
                           <span>Website:</span>
-                          <h5>
-                            <a href={casedata?.url} target="_blank" rel="noreferrer noopener" >
+                          <h5
+                            style={{
+                              whiteSpace: "nowrap",
+                              textOverflow: "ellipsis",
+                            }}
+                          >
+                            <a
+                              href={casedata?.url}
+                              target="_blank"
+                              rel="noreferrer noopener"
+                            >
                               {casedata?.url}
                             </a>
                           </h5>
