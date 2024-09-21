@@ -4,7 +4,7 @@ import { client } from '../../../../lib/sanity.client';
 import MainService from './mainService'
 
 export const metadata = {
-  title: "EvoShift - Software, SaaS & Digital Agency Template",
+  title: "EvoShift - Software Development & Digital Marketing Agency",
   icons: {
     icon: "/assets/img/sm-logo.svg",
   },
