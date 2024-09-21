@@ -176,7 +176,7 @@ const CaseStudyDetails = ({ casedata, contact }) => {
                         <div className="content">
                           <span>Website:</span>
                           <h5>
-                            <a href={casedata?.url} target="_blank">
+                            <a href={casedata?.url} target="_blank" rel="noreferrer noopener" >
                               {casedata?.url}
                             </a>
                           </h5>

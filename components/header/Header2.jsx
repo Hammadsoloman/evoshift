@@ -911,13 +911,13 @@ const Header2 = ({ data }) => {
                   </h6>
                   <ul className="social-area">
                     <li>
-                      <a href={ContactInfo?.linkedin} target="_blank">
+                      <a href={ContactInfo?.linkedin} target="_blank" rel="noreferrer noopener">
                         <i className="bi bi-linkedin" />
                         <span>LinkedIn</span>
                       </a>
                     </li>
                     <li>
-                      <a href={ContactInfo?.facebook} target="_blank">
+                      <a href={ContactInfo?.facebook} target="_blank" rel="noreferrer noopener">
                         <i className="bi bi-facebook" />
                         <span>Facebook</span>
                       </a>
@@ -938,7 +938,7 @@ const Header2 = ({ data }) => {
                       </a>
   </li>*/}
                     <li>
-                      <a href={ContactInfo?.instagram} target="_blank">
+                      <a href={ContactInfo?.instagram} target="_blank" rel="noreferrer noopener">
                         <i className="bi bi-instagram" />
                         <span>Instagram</span>
                       </a>
