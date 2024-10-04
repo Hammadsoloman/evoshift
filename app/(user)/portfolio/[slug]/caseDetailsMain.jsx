@@ -14,7 +14,7 @@ const CaseStudyDetails = ({ casedata, contact }) => {
   return (
     <MainLayout contact={contact} pageTitle={casedata.title}>
       <div
-        className="  case-study-details-page pt-120 mb-120"
+        className="case-study-details-page pt-120 mb-120"
         id="case-details-section"
       >
         <div className="container">

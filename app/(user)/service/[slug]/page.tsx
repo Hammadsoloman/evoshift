@@ -1,7 +1,7 @@
-import { groq } from 'next-sanity';
-import Image from 'next/image';
-import { client } from '../../../../lib/sanity.client';
-import MainService from './mainService'
+import { groq } from "next-sanity";
+import Image from "next/image";
+import { client } from "../../../../lib/sanity.client";
+import MainService from "./mainService";
 
 export const metadata = {
   title: "EvoShift - Software Development & Digital Marketing Agency",
@@ -10,22 +10,26 @@ export const metadata = {
   },
 };
 
-
-
 type Props = {
   params: {
     slug: string;
   };
 };
 
-
-  const query = groq`*[_type == "service"][slug.current == $slug][0] {
+const query = groq`*[_type == "service"][slug.current == $slug][0] {
   
       ...,      
      
   }`;
 
-  const contactquery = groq`
+const servicesquery = groq`
+  *[_type=='service'] {
+    ...,
+   
+  } | order(_createdAt asc)
+`;
+
+const contactquery = groq`
   *[_type=='contact'] {
     ...,
     
@@ -33,21 +37,18 @@ type Props = {
   } | order(_createdAt desc)
 `;
 
-
 const ServiceDetailPage = async ({ params }: { params: { slug: string } }) => {
   const { slug } = params;
 
-  const service = await client.fetch(query, { slug }) || [];
+  const service = (await client.fetch(query, { slug })) || [];
+  const services = await client.fetch(servicesquery);
   const contact = await client.fetch(contactquery);
-  
 
   return (
     <div>
-
-<MainService contact={contact[0]} data ={service}/>
+      <MainService contact={contact[0]} data={service} services={services} />
     </div>
   );
 };
 
 export default ServiceDetailPage;
-

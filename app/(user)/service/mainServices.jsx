@@ -25,7 +25,6 @@ const ServicesPage = ({ services, contact }) => {
                 >
                   <div className="service-card two">
                     <Link href={`/service/${item?.slug?.current}`}>
-                      {" "}
                       <div className="content">
                         <h4>{item?.heading}</h4>
 
