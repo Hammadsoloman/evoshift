@@ -47,6 +47,7 @@ const ServiceDetailPage = async ({ params }: { params: { slug: string } }) => {
   return (
     <div>
       <MainService contact={contact[0]} data={service} services={services} />
+      
     </div>
   );
 };

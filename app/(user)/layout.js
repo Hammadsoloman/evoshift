@@ -49,6 +49,48 @@ export default function RootLayout({ children }) {
           src="https://embed.tawk.to/66ef21c5e5982d6c7bb27f53/1i8b1nqm3"
         />
         <script src="/evoshift.min.js" async defer />
+        <style jsx global>{`
+        .flip-card {
+          background-color: transparent;
+          width: 300px;
+          height: 300px;
+          perspective: 1000px;
+        }
+
+        .flip-card-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .flip-card:hover .flip-card-inner {
+          transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+          background-color: #bbb;
+          color: black;
+        }
+
+        .flip-card-back {
+          background-color: #2980b9;
+          color: white;
+          transform: rotateY(180deg);
+        }
+      `}</style>
       </body>
     </html>
   );
