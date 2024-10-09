@@ -27,7 +27,7 @@
     "id": "12",
     "name": "ABOUT US",
     "slug": "/about",
-    "pageTitle": "We are a IT service Company working with talents on delivering unique ideas.",
+    "pageTitle": "We team up with talented people to bring fresh, unique ideas to life.",
     "section_down_scroll": "#about-section"
   },
 
@@ -43,14 +43,14 @@
     "id": "27",
     "name": "CONTACT US",
     "slug": "/contact",
-    "pageTitle": "Let’s Connecting With EvoShift.",
+    "pageTitle": "Discover What EvoShift Can Do for You—Let’s Connect!",
     "section_down_scroll": "#shop"
   },
   {
     "id": "28",
     "name": "ABOUT US",
     "slug": "/about",
-    "pageTitle": "We are a IT service Company working with talents on delivering unique ideas.",
+    "pageTitle": "We team up with talented people to bring fresh, unique ideas to life.",
     "section_down_scroll": "#about-section"
   }
 ]

@@ -9,6 +9,7 @@ import { RichTextComponents } from "../../../../components/RichTextComponents";
 import Link from "next/link";
 
 export default function mainService({ data, contact, services }) {
+  console.log(data);
   return (
     <MainLayout contact={contact} pageTitle={data?.heading}>
       <div className="case-study-details-page pt-120 mb-120">
@@ -65,27 +66,39 @@ export default function mainService({ data, contact, services }) {
                   />
                 </div>
               </div>
-              <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <img
-                      src={urlFor(data.mainImage)?.url()}
-                      alt=""
-                      style={{ width: 300, height: 300 }}
-                    />
+
+              <div className="row gap-5 gap-lg-0" >
+                {data?.cards.map((card, idx) => (
+                  <div key={idx} className="flip-card col-lg-4 ">
+                    <div className="flip-card-inner">
+                      <div
+                        className="flip-card-front"
+                        style={{
+                          backgroundImage: `url(${urlFor(data.mainImage)?.url()})`,
+                          backgroundRepeat: "no-repeat",
+                          backgroundPosition: "center center",
+                          backgroundSize: "cover",
+                        }}
+                      >
+                        {/* <img
+                        src={urlFor(data.mainImage)?.url()}
+                        alt=""
+                        style={{ width: 300, height: 300 }}
+                    />*/}
+                      </div>
+                      <div className="flip-card-back">
+                        <h3 style={{ color: "white" }}>{card?.title}</h3>
+                        <p>{card?.description}</p>
+                      </div>
+                    </div>
                   </div>
-                  <div class="flip-card-back">
-                    <h1>John Doe</h1>
-                    <p>Architect & Engineer</p>
-                    <p>We love that guy</p>
-                  </div>
-                </div>
+                ))}
               </div>
+
             </div>
           </div>
         </div>
       </div>
-    
     </MainLayout>
   );
 }

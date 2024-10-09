@@ -36,26 +36,34 @@ const Home5whyChoose = ({ data }) => {
                 <p>{data?.desc}</p>
               </div>
             </div>
-            <ul className="mb-40" style={{ listStyleType: "circle",listStylePosition:"inside" }}>
+            <ul
+              className="mb-40"
+              style={{ listStyleType: "circle", listStylePosition: "inside" }}
+            >
               <li>
-                We have an extensive experience in designing and developing
-                websites and web applications.
+                <b>Expert Web Design and Development:</b> We have extensive experience
+                in creating websites and web applications that drive results.
               </li>
               <li>
-                We have a professional team with extensive experience of
-                talented designers and developers.
+                <b>Talented Team:</b> Our professional team consists of skilled
+                designers and developers ready to bring your vision to life.
               </li>
               <li>
-                We are committed to providing high-quality websites that meet
-                your needs.
+                <b>Quality Commitment:</b> We are dedicated to delivering high-quality
+                websites and digital marketing solutions tailored to your needs.
               </li>
               <li>
-                We provide exceptional customer service to ensure customer
-                satisfaction wherever they are.
+                <b>Outstanding Customer Support:</b> Our exceptional customer service
+                ensures your satisfaction, no matter where you are.
               </li>
               <li>
-                We provide high quality services at competitive prices to suit
-                all budgets.
+                <b>Affordable Services:</b> We offer high-quality services at
+                competitive prices, making it easy to fit your budget.
+              </li>
+              <li>
+                <b>Digital Marketing Excellence:</b> We specialize in effective digital
+                marketing strategies to boost your online presence and attract
+                more customers.
               </li>
             </ul>
           </div>

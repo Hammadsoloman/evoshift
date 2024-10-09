@@ -37,7 +37,9 @@ export default function RootLayout({ children }) {
           type="image/x-icon"
           sizes="16x16"
         />
-        <title>EvoShift - Software Development &amp; Digital Marketing Agency</title>
+        <title>
+          EvoShift - Software Development &amp; Digital Marketing Agency
+        </title>
       </head>
       <body>
         <ScrollProgress />
@@ -50,47 +52,53 @@ export default function RootLayout({ children }) {
         />
         <script src="/evoshift.min.js" async defer />
         <style jsx global>{`
-        .flip-card {
-          background-color: transparent;
-          width: 300px;
-          height: 300px;
-          perspective: 1000px;
-        }
+          .flip-card {
+            background-color: transparent;
+           // width: 100%;
+            height: 300px;
+            perspective: 1000px;
+          }
 
-        .flip-card-inner {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          text-align: center;
-          transition: transform 0.6s;
-          transform-style: preserve-3d;
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        }
+          .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          }
 
-        .flip-card:hover .flip-card-inner {
-          transform: rotateY(180deg);
-        }
+          .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+          }
 
-        .flip-card-front,
-        .flip-card-back {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-        }
+          .flip-card-front,
+          .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+          }
 
-        .flip-card-front {
-          background-color: #bbb;
-          color: black;
-        }
+          .flip-card-front {
+            background-color: #bbb;
+            color: black;
+          }
 
-        .flip-card-back {
-          background-color: #2980b9;
-          color: white;
-          transform: rotateY(180deg);
-        }
-      `}</style>
+          .flip-card-back {
+            background-color: #2980b9;
+            color: white;
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction:column;
+            justify-content:center;
+            padding-left: 5px;
+            padding-right: 5px;
+            
+          }
+        `}</style>
       </body>
     </html>
   );

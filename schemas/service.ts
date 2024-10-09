@@ -161,6 +161,29 @@ export const Service = defineType({
       title: 'Body',
       type: 'blockContent',
     }),
+
+    {
+      name: "cards",
+      type: "array",
+      title: "Cards",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "title",
+              type: "string",
+              title: "Title",
+            },
+            {
+              name: "description",
+              type: "string",
+              title: "Description",
+            },
+          ],         
+        }
+      ],
+    },
   ],
   icon: DocumentTextIcon,
   preview: {
