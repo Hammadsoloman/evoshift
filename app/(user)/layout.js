@@ -18,6 +18,7 @@ import ThemeSwitch from "../../components/common/Theme";
 import useWow from "../../hooks/useWow";
 //import LiveChat from "../../components/chat/LiveChat";
 import Script from "next/script";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 export default function RootLayout({ children }) {
   useWow();
@@ -41,6 +42,7 @@ export default function RootLayout({ children }) {
           EvoShift - Software Development &amp; Digital Marketing Agency
         </title>
       </head>
+      <GoogleTagManager gtmId="GTM-TD3GBJM2" />
       <body>
         <ScrollProgress />
         <ThemeSwitch />
@@ -51,10 +53,34 @@ export default function RootLayout({ children }) {
           src="https://embed.tawk.to/66ef21c5e5982d6c7bb27f53/1i8b1nqm3"
         />
         <script src="/evoshift.min.js" async defer />
+        <Script id="facebook-pixel" strategy="afterInteractive">
+          {`
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '1047790780361125');
+          fbq('track', 'PageView');
+        `}
+        </Script>
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src={
+              "https://www.facebook.com/tr?id=1047790780361125&ev=PageView&noscript=1"
+            }
+          />
+        </noscript>
         <style jsx global>{`
           .flip-card {
             background-color: transparent;
-           // width: 100%;
+            // width: 100%;
             height: 300px;
             perspective: 1000px;
           }
@@ -92,11 +118,10 @@ export default function RootLayout({ children }) {
             color: white;
             transform: rotateY(180deg);
             display: flex;
-            flex-direction:column;
-            justify-content:center;
+            flex-direction: column;
+            justify-content: center;
             padding-left: 5px;
             padding-right: 5px;
-            
           }
         `}</style>
       </body>

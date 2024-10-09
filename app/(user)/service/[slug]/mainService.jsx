@@ -9,7 +9,7 @@ import { RichTextComponents } from "../../../../components/RichTextComponents";
 import Link from "next/link";
 
 export default function mainService({ data, contact, services }) {
-  console.log(data);
+ 
   return (
     <MainLayout contact={contact} pageTitle={data?.heading}>
       <div className="case-study-details-page pt-120 mb-120">
@@ -65,9 +65,16 @@ export default function mainService({ data, contact, services }) {
                     components={RichTextComponents}
                   />
                 </div>
+
+                <div className=" mt-24 mx-12">
+                  <PortableText
+                    value={data?.benefits}
+                    components={RichTextComponents}
+                  />
+                </div>
               </div>
 
-              <div className="row gap-5 gap-lg-0" >
+              <div className="row gap-5 gap-lg-0">
                 {data?.cards.map((card, idx) => (
                   <div key={idx} className="flip-card col-lg-4 ">
                     <div className="flip-card-inner">
@@ -94,6 +101,53 @@ export default function mainService({ data, contact, services }) {
                   </div>
                 ))}
               </div>
+
+              <div className="faq-section scroll-margin pt-120 mb-120" id="faq-section">
+              <div className="row g-4 mb-120">
+                <div className="col-lg-4 d-flex justify-content-lg-center align-items-lg-center">
+                  <div className="verticle-text">
+                    <h2>FAQs</h2>
+                  </div>
+                </div>
+                <div className="col-lg-8">
+                  <div className="faq-content style-2">
+                    <div className="accordion" id="accordionExample">
+                      {data?.faqs?.map((e, i) => (
+                        <div
+                          className="accordion-item my-3 border-0 rounded-4"
+                          key={i}
+                        >
+                          <h2 className="accordion-header" id={"heading" + i}>
+                            <button
+                              className="accordion-button fw-bold"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target={"#collapse" + i}
+                              aria-expanded="false"
+                              aria-controls={"collapse" + i}
+                            >
+                              {e.question}
+                            </button>
+                          </h2>
+                          <div
+                            id={"collapse" + i}
+                            className="accordion-collapse collapse "
+                            aria-labelledby={"heading" + i}
+                            data-bs-parent="#accordionExample"
+                          >
+                            <div className="accordion-body">
+                              <div className="row my-4 align-items-center">
+                                <div className="col-md-9">{e.answer}</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+</div>
 
             </div>
           </div>

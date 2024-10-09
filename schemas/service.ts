@@ -49,9 +49,9 @@ export const Service = defineType({
     defineField({ name: "sidebarIcon", type: "inlineSvg" }),
 
     defineField({
-      name: 'mainImage',
-      title: 'Main image',
-      type: 'image',
+      name: "mainImage",
+      title: "Main image",
+      type: "image",
       options: {
         hotspot: true,
       },
@@ -157,10 +157,41 @@ export const Service = defineType({
     }),
 
     defineField({
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent',
+      name: "body",
+      title: "Body",
+      type: "blockContent",
     }),
+
+    defineField({
+      name: "benefits",
+      title: "Benefits",
+      type: "blockContent",
+    }),
+
+    {
+      name: "faqs",
+      type: "array",
+      title: "FAQS",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "question",
+              type: "string",
+              title: "Question",
+            },
+            {
+              name: "answer",
+              type: "string",
+              title: "Answer",
+            },
+          ],
+
+          // show icon instead of icon name
+        },
+      ],
+    },
 
     {
       name: "cards",
@@ -180,8 +211,8 @@ export const Service = defineType({
               type: "string",
               title: "Description",
             },
-          ],         
-        }
+          ],
+        },
       ],
     },
   ],
