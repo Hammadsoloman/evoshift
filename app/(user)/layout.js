@@ -18,7 +18,7 @@ import ThemeSwitch from "../../components/common/Theme";
 import useWow from "../../hooks/useWow";
 //import LiveChat from "../../components/chat/LiveChat";
 import Script from "next/script";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 
 export default function RootLayout({ children }) {
   useWow();
@@ -42,7 +42,8 @@ export default function RootLayout({ children }) {
           EvoShift - Software Development &amp; Digital Marketing Agency
         </title>
       </head>
-      <GoogleTagManager gtmId="GTM-TD3GBJM2" />
+      {/* <GoogleTagManager gtmId="GTM-TD3GBJM2" />*/}
+      <GoogleAnalytics gaId="G-EBNXG2WDN7" />
       <body>
         <ScrollProgress />
         <ThemeSwitch />
