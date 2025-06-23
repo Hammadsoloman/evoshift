@@ -29,7 +29,6 @@ const BlogDetailPage = async ({ params }: { params: { slug: string } }) => {
 
   const blog = (await client.fetch(query, { slug })) || [];
 
-
   return (
     <section
       id="section"
